@@ -14,6 +14,7 @@ namespace CharacterBuilder
     {
         public static void Main(string[] args)
         {
+            //Test comment
             CreateWebHostBuilder(args).Build().Run();
         }
 
