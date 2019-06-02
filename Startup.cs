@@ -38,7 +38,7 @@ namespace CharacterBuilder
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            // This is a change to the Startup file.
+            // This is a change to the Startup file.....
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
