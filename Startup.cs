@@ -29,7 +29,7 @@ namespace CharacterBuilder
                 configuration.RootPath = "ClientApp/dist";
             });
 
-            string connection = "Data Source=characterbuilder.db";
+            string connection = Configuration["ConnectionString"];
             services.AddDbContext<DBContext>(options => options.UseSqlite(connection));
           
 

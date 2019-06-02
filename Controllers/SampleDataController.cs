@@ -3,12 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-
+using CharacterBuilder.Models;
 namespace CharacterBuilder.Controllers
 {
     [Route("api/[controller]")]
     public class SampleDataController : Controller
     {
+        private DBContext _context;
+
+        public SampleDataController(DBContext context)
+        {
+            _context = context;
+        }
+
+
         private static string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -17,6 +25,15 @@ namespace CharacterBuilder.Controllers
         [HttpGet("[action]")]
         public IEnumerable<WeatherForecast> WeatherForecasts()
         {
+            //Character exists = _context.Characters.FirstOrDefault();
+
+
+            //Character c = new Character();
+            //c.Name = "Adam!!!!";
+            //c.Id = 1;
+            //_context.Characters.Add(c);
+            //_context.SaveChanges();
+
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
