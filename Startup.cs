@@ -11,6 +11,7 @@ namespace CharacterBuilder
 {
     public class Startup
     {
+        //This is a test
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
