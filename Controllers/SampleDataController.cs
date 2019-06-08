@@ -26,7 +26,7 @@ namespace CharacterBuilder.Controllers
         public IEnumerable<WeatherForecast> WeatherForecasts()
         {
             //Character exists = _context.Characters.FirstOrDefault();
-
+            //This is just a test.
 
             //Character c = new Character();
             //c.Name = "Adam!!!!";
